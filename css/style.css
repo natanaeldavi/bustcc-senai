@@ -11,6 +11,35 @@ body {
     box-shadow: 2px 2px 2px 0 rgba(0,0,0,.2);
 }
 
+.login-card {
+    margin-top: 1em;
+    box-shadow: 6px 6px 0px -2px #737373;
+}
+
+.login-erro {
+    background-color: #F2DEDE;
+    color: #A94442;
+    padding: 10px 0;
+    margin-left: 20px;
+    width: 90%;
+    border-radius: 5px;
+
+}
+
+.login-card h2 {
+    font-size: 18pt;
+    padding-top: 1em;
+}
+
+.login-card label {
+    padding: 0;
+    margin: 2em 0 0;
+}
+
+.botao-entrar {
+    margin-top: 2em;
+}
+
 .text-justify {
     text-align: justify;
 }
@@ -72,6 +101,11 @@ body {
         margin-top: 50px;
         margin-left: -50px;
     }
+
+    .login-card {
+        height: 400px;
+        margin-top: 6em;
+    }
     
 }
 
@@ -84,6 +118,10 @@ body {
         width: 100%;
         height: 500px;
         margin-top: 100px;
+    }
+
+    .login-card {
+        height: 500px;
     }
 
 }
@@ -143,6 +181,10 @@ body {
     .mapa {
         margin-top: -10px;
     }
+
+    .input-text {
+        width: 150px;
+    }
 }
 
 @media screen and (max-width: 445px) {
@@ -157,6 +199,14 @@ body {
 
     .image-card {
         margin-left: 30%;
+    }
+
+    .input-text {
+        width: 100px;
+    }
+
+    .login-card h2 {
+        font-size: 14pt;
     }
     
 }

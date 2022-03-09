@@ -1,0 +1,104 @@
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    background-color: #f3f3f3;
+  }
+  
+  html {
+    height: -webkit-fill-available;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .b-example-divider {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    visibility: hidden;
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    pointer-events: none;
+    fill: currentColor;
+  }
+  
+  .dropdown-toggle { outline: 0; }
+  
+  .nav-flush .nav-link {
+    border-radius: 0;
+  }
+  
+  .scrollarea {
+    overflow-y: auto;
+  }
+  
+  .fw-semibold { font-weight: 600; }
+  .lh-tight { line-height: 1.25; }
+
+  .adm-card {
+    margin-top: 3em;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,.2);
+    background-color: #ffffff;
+}
+  .adm-card h2 {
+    margin-top: 0.6em;
+  }
+
+  .piechart {
+      background-color: rgba(0, 0, 0, 0);
+  }
+
+/* Media Queries */
+
+@media screen and (min-width: 1170px) {
+
+    .adm-card {
+        width: 20em;
+        height: 300px;
+    }
+    
+}
+
+@media screen and (max-width: 1169px) {
+
+    .adm-card {
+        width: 20em;
+        height: 300px;
+    }
+    
+
+}
+
+@media screen and (min-width: 768px) {
+    
+
+
+}
+
+@media screen and (max-width: 767px) {
+    
+
+}
+
+@media screen and (max-width: 576px) {
+    
+}
+
+@media screen and (max-width: 445px) {
+
+    
+    
+}
