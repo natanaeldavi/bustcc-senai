@@ -11,8 +11,9 @@ body {
     box-shadow: 2px 2px 2px 0 rgba(0,0,0,.2);
 }
 
-.login-card {
-    margin-top: 1em;
+.login-card {  
+    margin: 0 auto;
+    margin-top: 10;
     box-shadow: 6px 6px 0px -2px #737373;
 }
 
@@ -33,7 +34,7 @@ body {
 
 .login-card label {
     padding: 0;
-    margin: 2em 0 0;
+    margin: 3em 0 0;
 }
 
 .botao-entrar {
@@ -65,7 +66,7 @@ body {
 /* INDEX */
 
 #home {
-    background: url(../img/grupo.jpeg) no-repeat center center fixed;
+    background: url(../img/img-grupo.jpg) no-repeat center center fixed;
     display: table;
     height: 600px;
     position: relative;
@@ -83,26 +84,49 @@ body {
     -webkit-text-stroke-color: #000;
 }
 
+.text-principal {
+    font-size: 32pt;
+}
+
 .two-section {
     margin-top: 25px;
     margin-bottom: 0;
 }
 
+.bus-info {
+    padding-right: 40px;
+}
+
+.link-ativo {
+    color: black;
+}
+
 
 @media screen and (min-width: 1170px) {
+
+    .bus-info {
+        top: 150px;
+    }
 
     .big-card {
         height: 600px;
     }
 
+    .map-div {
+        margin-top: 0px;
+        height: 500px;
+    }
+
     .mapa {
+        position: relative;
         width: 100%;
         height: 100%;
-        margin-top: 50px;
+        top: -60px;
         margin-left: -50px;
     }
 
     .login-card {
+        width: 750px;
         height: 400px;
         margin-top: 6em;
     }
@@ -110,18 +134,29 @@ body {
 }
 
 @media screen and (max-width: 1169px) {
+
     .big-card {
         height: 1000px;
     }
 
+    .bus-info {
+        top: 300px;
+    }
+
+    .map-div {
+        height: 700px;
+    }
+
     .mapa {
         width: 100%;
-        height: 500px;
+        height: 100%;
         margin-top: 100px;
     }
 
     .login-card {
+        width: 600px;
         height: 500px;
+        margin-top: 6em;
     }
 
 }
@@ -165,6 +200,12 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+
+    .bus-info {
+        top: 0px;
+        padding-bottom: 20px;
+    }
+
     .card {
         height: 300px;
     }
@@ -184,6 +225,16 @@ body {
 
     .input-text {
         width: 150px;
+    }
+
+    .login-card {
+        width: 400px;
+        height: 400px;
+        margin-top: 6em;
+    }
+
+    .login-card input {
+        width: 90%;
     }
 }
 
@@ -207,6 +258,12 @@ body {
 
     .login-card h2 {
         font-size: 14pt;
+    }
+
+    .login-card {
+        width: 300px;
+        height: 400px;
+        margin-top: 6em;
     }
     
 }
@@ -273,4 +330,5 @@ body {
 
 .footer {
     box-shadow: 2px 0px 4px 0 rgba(0,0,0,.2);
+    margin-bottom: 0;
 }

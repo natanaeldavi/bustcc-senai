@@ -16,7 +16,7 @@ $result = $mysqli->query($consulta);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuS - TCC</title>
+    <title>SeveN BuS - TCC | Ônibus 01</title>
 
     <!-- link bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -50,13 +50,13 @@ $result = $mysqli->query($consulta);
       <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html">BuS - TCC</a>
+            <a class="nav-link" aria-current="page" href="../index.html">SeveN BuS - TCC</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="bus.html">Linhas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pontos</a>
+            <a class="nav-link" href="../funcionarios/login.php">Login</a>
           </li>
         </ul>
       </div>
@@ -66,12 +66,8 @@ $result = $mysqli->query($consulta);
 
   <div class="container-fluid col-md-10 col-sm-10 col-10 bg-light rounded border big-card">
     <div class="row">
-      <div class="col-sm-6">
-        <h1 class="title text-center text-dark" style="margin-top: 30px;"> Ônibus 001 </h1>
-        <p style="margin-top: 50px;">Motoristas: ------------</p>
-        <p>Linha: Ponto 01 -> Ponto 02 -> Ponto 03</p>
-        <p>Horário de início: 05:00</p>
-        <p>Horário de término da linha: 23:30</p>
+      <div class="col-sm-6 bus-info">
+        <h1 class="title text-center text-dark" style="margin-top: 30px;"> Ônibus 01 </h1>
 
     <!-- Local a onde irá mostrar qual o último ponto onde o ônibus passou -->
 
@@ -103,11 +99,11 @@ $result = $mysqli->query($consulta);
     }    
     ?>
 
-        <p>Último ponto em que esteve: <?php echo "$ponto"?> às <?php echo "$hora" ?> </p>
+        <p style="margin-top: 40px;">Último ponto em que esteve: <?php echo "$ponto"?> às <?php echo "$hora" ?> </p>
         <p>Está a caminho para o ponto: <?php echo "$prox_ponto" ?> </p>
       </div>
    
-      <div class="col-sm-6">
+      <div class="col-sm-6 map-div">
         <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=14ys5gtTsImWzePoC8ZQNvu5DMMZPVcOk&ehbc=2E312F" width="640" height="480" class="mapa img-fluid border rounded"></iframe>
       </div>
     </div>
@@ -116,13 +112,7 @@ $result = $mysqli->query($consulta);
 
   </div>
 
-  <!-- Footer (rodapé) -->
-
-  <footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-      <span class="text-muted">BuS - TCC | SENAI Mogi Guaçu - 2021 &copy;</span>
-    </div>
-  </footer>
+  
 
 
   <!-- Passa variável php para js -->
@@ -132,7 +122,13 @@ $result = $mysqli->query($consulta);
 
   <script type="text/javascript" src="../js/javascript.js"></script>
 
-  
 
+  <!-- Footer (rodapé) -->
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">SeveN BuS - TCC | SENAI Mogi Guaçu - 2021/2022 &copy;</span>
+    </div>
+  </footer>
 </body>
 </html>
