@@ -308,6 +308,10 @@ body {
         height: 70px;
     }
 
+    .adm-card h2, .adm-card h3{
+        margin-top: 70px;
+    }
+
 
 }
 
@@ -447,6 +451,11 @@ body {
 
     .tabela-funcionarios tr {
         height: 70px;
+    }
+
+    .adm-card h2, .adm-card h3{
+        font-size: 18pt;
+
     }
     
 }
