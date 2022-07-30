@@ -165,6 +165,10 @@ body {
     margin: 20px auto;
 }
 
+.tabela-funcionarios {
+    width: 100%;
+}
+
 .tabela-funcionarios tr {
     border-bottom: 1px, solid, rgb(43, 43, 43);
 }
@@ -225,10 +229,6 @@ body {
         height: 300px;
     }
 
-    .tabela-funcionarios {
-        width: 100%;
-    }
-
     .tabela-funcionarios tr {
         height: 60px;
     }
@@ -282,10 +282,6 @@ body {
         width: 50%;
     }
 
-    .tabela-funcionarios {
-        width: 100%;
-    }
-
     .tabela-funcionarios tr {
         height: 60px;
     }
@@ -307,13 +303,9 @@ body {
     .mapa {
         margin-top: 100px;
     }
-
-    .tabela-funcionarios {
-        width: 100%;
-    }
     
     .tabela-funcionarios tr {
-        height: 60px;
+        height: 70px;
     }
 
 
@@ -338,10 +330,6 @@ body {
 
     .sugest-card input[type="text"], .sugest-card input[type="password"] {
         width: 70%;
-    }
-
-    .tabela-funcionarios {
-        width: 100%;
     }
 
     .tabela-funcionarios tr {
@@ -402,12 +390,8 @@ body {
         width: 90%;
     }
 
-    .tabela-funcionarios {
-        width: 100%;
-    }
-
     .tabela-funcionarios tr {
-        height: 60px;
+        height: 100px;
     }
 
     .sugest-card textarea {
@@ -457,9 +441,10 @@ body {
         width: 90%;
     }
 
-    .tabela-funcionarios {
-        width: 50%;
+    .tabela-funcionarios .table-email {
+        display: none;
     }
+
     .tabela-funcionarios tr {
         height: 70px;
     }

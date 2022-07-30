@@ -87,11 +87,11 @@ $total = mysqli_num_rows($result);
       <table class="tabela-funcionarios">
         <thead>
           <tr>
-            <th scope="col">Data</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Email</th>
-            <th scope="col">Tema</th>
-            <th scope="col">Sugestão</th>
+            <th scope="col">Data<br>
+            Tema</th>
+            <th scope="col">Nome<br>
+            Sugestão</th>
+            <th scope="col" class="table-email">Email</th>
           </tr>
           <?php
           
@@ -100,10 +100,15 @@ $total = mysqli_num_rows($result);
               <tr>
                 <td><?=$linha['data']?></td>
                 <td><?=$linha['nome']?></td>
-                <td><?=$linha['email']?></td>
+                <td class="table-email"><?=$linha['email']?></td>
+              </tr>
+              <tr>
                 <td><?=$linha['tema']?></td>
-                <td><?=$linha['sugestao']?></td>
-              </tr><?php
+                <td colspan="2"><?=$linha['sugestao']?></td>
+
+              </tr>
+              
+              <?php
             } while($linha = mysqli_fetch_assoc($result));
           }?>
         </thead>

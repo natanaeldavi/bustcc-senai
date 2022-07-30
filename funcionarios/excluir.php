@@ -99,7 +99,7 @@ $total = mysqli_num_rows($result);
             <th scope="col">id</th>
             <th scope="col">Nome</th>
             <th scope="col">CPF</th>
-            <th scope="col">Cargo</th>
+            <th scope="col" class="table-email">Cargo</th>
             <th scope="col"></th>
           </tr>
           <?php
@@ -110,7 +110,7 @@ $total = mysqli_num_rows($result);
                 <td><?=$linha['id']?></td>
                 <td><?=$linha['nome']?></td>
                 <td><?=$linha['cpf']?></td>
-                <td><?=$linha['cargo']?></td>
+                <td class="table-email"><?=$linha['cargo']?></td>
                 <td>
 
                 <form action="../php/excluir-funcionario.php" method="post">
