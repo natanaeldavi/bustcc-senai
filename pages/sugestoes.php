@@ -41,32 +41,38 @@
             <a class="nav-link" aria-current="page" href="../index.html">SeveN BuS - TCC</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/bus.html">Linhas</a>
+            <a class="nav-link" href="bus.html">Linhas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/sugestoes.php">Sugestões</a>
+            <a class="nav-link active" href="">Sugestões</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Login</a>
+            <a class="nav-link" href="../funcionarios/login.php">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container bg-light login-card text-center border">
-    <form action="../php/login.php" method="post">
-      <h2 class="text-center">Login Funcionários</h2>
+  <div class="container bg-light sugest-card text-center border">
+    <form action="../php/submit-sugestoes.php" method="post">
+      <h2 class="text-center">Deixe sua sugestão abaixo:</h2>
 
       <?php if(isset($_GET['error'])) {?>
         <p class="login-erro"><?php echo $_GET['error'];?></p>
+      <?php } else if(isset($_GET['sucess'])) {?>
+        <p class="login-sucess"><?php echo $_GET['sucess'];?></p>
       <?php } ?>
 
-      <label>Usuário</label><br>
-      <input type="text" name="username" placeholder="Usuário" class="border rounded input-text"><br>
-      <label>Senha</label><br>
-      <input type="password" name="senha" placeholder="Senha" class="border rounded input-text"> <br>
-      <input class="btn btn-dark rounded botao-entrar" type="submit" value="Entrar">
+      <label>Nome:</label><br>
+      <input type="text" name="nome" placeholder="Seu Nome" class="border rounded input-text"><br>
+      <label>Email:</label><br>
+      <input type="text" name="email" placeholder="Seu Email" class="border rounded input-text"><br>
+      <label>Tema:</label><br>
+      <input type="text" name="tema" placeholder="Tema da mensagem" class="border rounded input-text"><br>
+      <label>Mensagem:</label><br>
+      <textarea id="msg" name="sugestao" placeholder="Digite aqui sua mensagem" rows="4" cols="50"></textarea> <br>
+      <input class="btn btn-dark rounded botao-entrar" type="submit" value="Enviar">
     </form>
   </div>
 
@@ -74,7 +80,7 @@
 
   <!-- Footer (rodapé) -->
 
-  <footer class="footer mt-auto py-3 bg-light fixed-bottom">
+  <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
       <span class="text-muted">SeveN BuS - TCC | SENAI Mogi Guaçu - 2021/2022 &copy;</span>
     </div>

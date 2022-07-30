@@ -56,6 +56,9 @@ $result = $mysqli->query($consulta);
             <a class="nav-link" href="bus.html">Linhas</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="sugestoes.php">Sugestões</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="../funcionarios/login.php">Login</a>
           </li>
         </ul>

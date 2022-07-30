@@ -72,7 +72,6 @@ if ($estado_bus02 == "01") {
     <!--- link css -->
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/administracao.css">
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- link fontes -->
@@ -82,67 +81,51 @@ if ($estado_bus02 == "01") {
 
 </head>
 
-<main>
+<body class="body-adm">
 
   <!-- Navbar -->
 
-  <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <img src="../img/busicon.png" class="bi me-2" width="32" height="32">
-      <span class="fs-4">Administração</span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#"/></svg>
-          Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#"/></svg>
-          Banco de dados
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#"/></svg>
-          Ônibus
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#"/></svg>
-          Pontos
-        </a>
-      </li>
-    </ul>
-    <hr>
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="../img/busicon.png" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong><?php echo $_SESSION['nome']; ?></strong>
-      </a>
-      <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-        <li><a class="dropdown-item" href="../php/logout.php">Sign out</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg bg-light navbar-light rounded-bottom" aria-label="Twelfth navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-current="page" href="#">SeveN BuS - TCC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../php/logout.php">Logout</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="b-example-divider"></div>
+  </nav>
 
     <!-- Início dashboard -->
 
   <div class="row">
-    <div class="container-fluid text-center adm-card col-sm-5">
+    <div class="container-fluid text-center adm-card col-sm-3">
         <br>
         <br>
-        <h2>Seja Bem vindo,</h2>
+        <br>
+        <h2>Seja bem vindo,</h2>
         <h4><?php echo $_SESSION['nome']; ?></h4>
         <h5>Cargo: <?php echo $_SESSION['cargo']; ?></h5>
     </div>
 
-    <div class="container-fluid text-center adm-card col-sm-5">
+    <div class="container-fluid text-center adm-card col-sm-3">
+        <br>
+        <br>
+        <br>
+        <h3>Funcionários:</h3>
+        <a href="cadastrar.php" class="btn btn-secondary btn-cadastro">Cadastrar</a>
+        <a href="excluir.php?nome=" class="btn btn-secondary btn-cadastro">Excluir</a>
+    </div>
+
+    <div class="container-fluid text-center adm-card col-sm-3">
         <h5 style="margin-top: 0.7em;" >Número de veículos operantes:</h5>
         <script type="text/javascript">
             google.charts.load("current", {packages:["corechart"]});
@@ -170,11 +153,26 @@ if ($estado_bus02 == "01") {
         margin-top: -4em;
         "></div>
     </div>
+
   </div>
 
-</main>
+  <div class="row">
+
+    <div class="container-fluid text-center adm-card col-sm-3">
+          <br>
+          <br>
+          <br>
+          <h3>Feedback da comunidade:</h3>
+          <a href="view-sugestoes.php" class="btn btn-secondary btn-cadastro">Ver sugestões</a>
+      </div>
+
+  </div>
+
+
 
   <!-- Footer (rodapé) -->
+  
+  <div class="fim-page"></div>
 
   <footer class="footer mt-auto py-3 bg-light">
     <div class="container">

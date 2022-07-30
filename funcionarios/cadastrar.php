@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+
+
+if((!isset ($_SESSION['id']) == true) and (!isset ($_SESSION['username']) == true)){
+  header('location: ../index.html');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -38,35 +50,63 @@
       <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html">SeveN BuS - TCC</a>
+            <a class="nav-link disabled" aria-current="page" href="../index.html">SeveN BuS - TCC</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="../pages/bus.html">Linhas</a>
+            <a class="nav-link" href="administracao.php">Dashboard</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="../pages/sugestoes.php">Sugestões</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Login</a>
+            <a class="nav-link" href="../php/logout.php">Logout</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container bg-light login-card text-center border">
-    <form action="../php/login.php" method="post">
-      <h2 class="text-center">Login Funcionários</h2>
+  <div class="container bg-light sugest-card text-center border">
+    <form action="../php/cadastro-funcionario.php" method="post">
+      <h2 class="text-center">Deixe sua sugestão abaixo:</h2>
 
       <?php if(isset($_GET['error'])) {?>
         <p class="login-erro"><?php echo $_GET['error'];?></p>
+      <?php } else if(isset($_GET['sucess'])) {?>
+        <p class="login-sucess"><?php echo $_GET['sucess'];?></p>
       <?php } ?>
 
-      <label>Usuário</label><br>
-      <input type="text" name="username" placeholder="Usuário" class="border rounded input-text"><br>
-      <label>Senha</label><br>
-      <input type="password" name="senha" placeholder="Senha" class="border rounded input-text"> <br>
+      <label>Nome:</label>
+
+      <input type="text" name="nome" placeholder="Nome do funcionário" class="border rounded input-text">
+      
+      <label>CPF (Sem traços ou pontos):</label>
+
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" name="cpf" placeholder="CPF do funcionário" class="border rounded input-text" maxlength="11">
+
+      <label>TIPO:</label>
+
+      <input type="radio" id="adm" name="tipo" value="adm">
+
+      <label for="html" class="selecao">Administração</label><br>
+
+      <input type="radio" id="motorista" name="tipo" value="motorista">
+
+      <label for="css" class="selecao">Motorista / Cobrador</label>
+
+      <label>Cargo:</label>
+
+      <input type="text" name="cargo" placeholder="Cargo do funcionário" class="border rounded input-text">
+
+      <label>Nome de usuário:</label>
+
+      <input type="text" name="username" placeholder="Usuário" class="border rounded input-text">
+
+      <label>Senha:</label>
+
+      <input type="password" name="senha" placeholder="Senha" class="border rounded input-text"><br>
+      
       <input class="btn btn-dark rounded botao-entrar" type="submit" value="Entrar">
+      
     </form>
   </div>
 
@@ -74,7 +114,7 @@
 
   <!-- Footer (rodapé) -->
 
-  <footer class="footer mt-auto py-3 bg-light fixed-bottom">
+  <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
       <span class="text-muted">SeveN BuS - TCC | SENAI Mogi Guaçu - 2021/2022 &copy;</span>
     </div>

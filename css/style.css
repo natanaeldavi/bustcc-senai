@@ -11,6 +11,8 @@ body {
     box-shadow: 2px 2px 2px 0 rgba(0,0,0,.2);
 }
 
+/* Css Login */
+
 .login-card {  
     margin: 0 auto;
     margin-top: 10;
@@ -20,6 +22,16 @@ body {
 .login-erro {
     background-color: #F2DEDE;
     color: #A94442;
+    padding: 10px 0;
+    margin-left: 20px;
+    width: 90%;
+    border-radius: 5px;
+
+}
+
+.login-sucess {
+    background-color: #c6d2fc;
+    color: #3a8da7;
     padding: 10px 0;
     margin-left: 20px;
     width: 90%;
@@ -39,6 +51,23 @@ body {
 
 .botao-entrar {
     margin-top: 2em;
+}
+
+/* Css Sugestões */
+
+.sugest-card {  
+    margin: 0 auto;
+    box-shadow: 6px 6px 0px -2px #737373;
+}
+
+.sugest-card h2 {
+    font-size: 18pt;
+    padding-top: 1em;
+}
+
+.sugest-card label {
+    padding: 0;
+    margin: 3em 0 0;
 }
 
 .text-justify {
@@ -101,6 +130,56 @@ body {
     color: black;
 }
 
+/* Area administracao */
+
+.adm-card {
+    margin: 3em auto 0;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,.2);
+    background-color: #ffffff;
+}
+.adm-card h2, h3 {
+    margin-top: 0.6em;
+}
+
+.sugest-card label {
+    display: block;
+    margin-top: 20px;
+}
+
+.sugest-card label.selecao {
+    display: inline;
+}
+
+.piechart {
+      background-color: rgba(0, 0, 0, 0);
+}
+
+.body-adm {
+    background-color: #f3f3f3;
+}
+.btn-cadastro {
+    margin-bottom: 10px;
+}
+
+.pesquisa-excluir{
+    margin: 20px auto;
+}
+
+.tabela-funcionarios tr {
+    border-bottom: 1px, solid, rgb(43, 43, 43);
+}
+
+.tabela-funcionarios th, td {
+    border-bottom: 1px solid #ddd;
+  }
+
+.tabela-funcionarios tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+/* MEDIA QUERIES
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+*/
 
 @media screen and (min-width: 1170px) {
 
@@ -130,6 +209,40 @@ body {
         height: 400px;
         margin-top: 6em;
     }
+
+    .sugest-card {
+        width: 750px;
+        height: 700px;
+        margin-top: 2em;
+    }
+    
+    .sugest-card input[type="text"], .sugest-card input[type="password"] {
+        width: 50%;
+    }
+
+    .adm-card {
+        width: 20em;
+        height: 300px;
+    }
+
+    .tabela-funcionarios {
+        width: 100%;
+    }
+
+    .tabela-funcionarios tr {
+        height: 60px;
+    }
+
+    .adm-card {
+        width: 20em;
+        height: 300px;
+    }
+
+    .btn-cadastro {
+        width: 50%;
+    }
+
+    
     
 }
 
@@ -159,6 +272,24 @@ body {
         margin-top: 6em;
     }
 
+    .sugest-card {
+        width: 750px;
+        height: 700px;
+        margin-top: 2em;
+    }
+
+    .sugest-card input[type="text"], .sugest-card input[type="password"] {
+        width: 50%;
+    }
+
+    .tabela-funcionarios {
+        width: 100%;
+    }
+
+    .tabela-funcionarios tr {
+        height: 60px;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -175,6 +306,14 @@ body {
     }
     .mapa {
         margin-top: 100px;
+    }
+
+    .tabela-funcionarios {
+        width: 100%;
+    }
+    
+    .tabela-funcionarios tr {
+        height: 60px;
     }
 
 
@@ -195,6 +334,18 @@ body {
 
     .big-card {
         height: 1000px;
+    }
+
+    .sugest-card input[type="text"], .sugest-card input[type="password"] {
+        width: 70%;
+    }
+
+    .tabela-funcionarios {
+        width: 100%;
+    }
+
+    .tabela-funcionarios tr {
+        height: 60px;
     }
 
 }
@@ -233,7 +384,33 @@ body {
         margin-top: 6em;
     }
 
+    .sugest-card {
+        width: 400px;
+        height: 700px;
+        margin-top: 2em;
+    }
+
     .login-card input {
+        width: 90%;
+    }
+
+    .sugest-card input {
+        width: 90%;
+    }
+
+    .sugest-card input[type="text"], input[type="password"] {
+        width: 90%;
+    }
+
+    .tabela-funcionarios {
+        width: 100%;
+    }
+
+    .tabela-funcionarios tr {
+        height: 60px;
+    }
+
+    .sugest-card textarea {
         width: 90%;
     }
 }
@@ -265,8 +442,33 @@ body {
         height: 400px;
         margin-top: 6em;
     }
+
+    .sugest-card {
+        width: 300px;
+        height: 750px;
+        margin-top: 2em;
+    }
+
+    .sugest-card input {
+        width: 90%;
+    }
+
+    .sugest-card textarea {
+        width: 90%;
+    }
+
+    .tabela-funcionarios {
+        width: 50%;
+    }
+    .tabela-funcionarios tr {
+        height: 70px;
+    }
     
 }
+
+/* FIM MEDIA QUERIES
+////////////////////
+*/
 
 /*.card img {
     width: 100px;
