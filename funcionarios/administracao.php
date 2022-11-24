@@ -108,18 +108,12 @@ if ($estado_bus02 == "01") {
 
   <div class="row">
     <div class="container-fluid text-center adm-card col-sm-3">
-        <br>
-        <br>
-        <br>
         <h2>Seja bem vindo,</h2>
         <h4><?php echo $_SESSION['nome']; ?></h4>
         <h5>Cargo: <?php echo $_SESSION['cargo']; ?></h5>
     </div>
 
     <div class="container-fluid text-center adm-card col-sm-3">
-        <br>
-        <br>
-        <br>
         <h3>Funcionários:</h3>
         <a href="cadastrar.php" class="btn btn-secondary btn-cadastro">Cadastrar</a>
         <a href="excluir.php?nome=" class="btn btn-secondary btn-cadastro">Excluir</a>
@@ -159,9 +153,6 @@ if ($estado_bus02 == "01") {
   <div class="row">
 
     <div class="container-fluid text-center adm-card col-sm-3">
-          <br>
-          <br>
-          <br>
           <h3>Feedback da comunidade:</h3>
           <a href="view-sugestoes.php" class="btn btn-secondary btn-cadastro">Ver sugestões</a>
       </div>

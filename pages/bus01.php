@@ -128,7 +128,7 @@ $result = $mysqli->query($consulta);
 
   <!-- Footer (rodapé) -->
 
-  <footer class="footer mt-auto py-3 bg-light">
+  <footer class="footer bottom mt-auto py-3 bg-light">
     <div class="container">
       <span class="text-muted">SeveN BuS - TCC | SENAI Mogi Guaçu - 2021/2022 &copy;</span>
     </div>

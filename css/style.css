@@ -95,7 +95,7 @@ body {
 /* INDEX */
 
 #home {
-    background: url(../img/img-grupo.jpg) no-repeat center center fixed;
+    background: url(../img/img-principal.jpg) no-repeat center center fixed;
     display: table;
     height: 600px;
     position: relative;
@@ -340,6 +340,12 @@ body {
         height: 60px;
     }
 
+    #home {
+        background: url(../img/img-principal.jpg) no-repeat center top fixed;
+        height: 300px;
+        background-size: contain;
+    }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -401,6 +407,16 @@ body {
     .sugest-card textarea {
         width: 90%;
     }
+
+    #home {
+        background: url(../img/img-principal.jpg) no-repeat center top fixed;
+        height: 250px;
+        background-size: contain;
+    }
+
+    .text-principal {
+        font-size: 28pt;
+    }
 }
 
 @media screen and (max-width: 445px) {
@@ -455,7 +471,16 @@ body {
 
     .adm-card h2, .adm-card h3{
         font-size: 18pt;
+    }
 
+    #home {
+        background: url(../img/img-principal.jpg) no-repeat center top fixed;
+        height: 200px;
+        background-size: contain;
+    }
+
+    .text-principal {
+        font-size: 20pt;
     }
     
 }
